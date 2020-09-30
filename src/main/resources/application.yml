@@ -1,0 +1,39 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8887
+  #connection-timeout: 5000ms
+  servlet:
+    context-path: /
+
+spring:
+  # jackson时间格式化
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+elasticSearch:
+  host: localhost
+  port: 9200
+  #user: elastic
+  #password: xxx
+  client:
+    connectNum: 10
+    connectPerRoute: 50
+
+
+
+
+
+
